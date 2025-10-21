@@ -1,10 +1,16 @@
-import { Character } from "./Character.js";
+import { Character } from "./character.js";
 import * as readline from "readline/promises";
 import { stdin as input, stdout as output } from "node:process";
+import { saveCharacters } from "./saveData.js";
+import { loadCharacters } from "./loadData.js";
 
-const heroList: Character[] = [];
-const villainList: Character[] = [];
+let heroList: Character[] = [];
+let villainList: Character[] = [];
 async function getMenu() {
+  const loaded = await loadCharacters();
+  heroList = loaded.heroes;
+  villainList = loaded.villains;
+
   let validateInput: boolean = false;
 
   while (!validateInput) {
@@ -33,6 +39,8 @@ async function getMenu() {
             villainList.push(newCharacter);
           }
 
+          await saveCharacters(heroList, villainList);
+
           break;
         case "1":
           console.log("=== HEROES ===");
@@ -49,16 +57,19 @@ async function getMenu() {
           lr.close();
 
           const heroIndex = heroList.findIndex(
-            (char) => char.nickname === nameToDelete
+            (char) => char.nickname.toLowerCase() === nameToDelete.toLowerCase()
           );
           const villainIndex = villainList.findIndex(
-            (char) => char.nickname === nameToDelete
+            (char) => char.nickname.toLowerCase() === nameToDelete.toLowerCase()
           );
 
           if (heroIndex !== -1) {
             heroList.splice(heroIndex, 1);
+            await saveCharacters(heroList, villainList);
             console.log("Hero removed successfully!");
           } else if (villainIndex !== -1) {
+            villainList.splice(villainIndex, 1);
+            await saveCharacters(heroList, villainList);
             console.log("Villain removed successfully!");
           } else {
             console.log("Character not found.");
