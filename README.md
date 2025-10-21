@@ -1,6 +1,6 @@
 # char-creator
 
-Projeto simples em TypeScript, feito para aplicar os conceitos fundamentais da linguagem em um sistema de "criação de personagens". 
+Projeto simples desenvolvido em TypeScript, feito para aplicar os conceitos fundamentais da linguagem em um sistema de "criação de personagens". 
 
 Ao ser executado, o programa abre um painel de menu, que fornece opções como:
 
