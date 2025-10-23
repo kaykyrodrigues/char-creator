@@ -43,9 +43,9 @@ async function getMenu() {
 
           break;
         case "1":
-          console.log("=== HEROES ===");
+          console.log("===== HEROES =====");
           console.log(heroList);
-          console.log("=== VILLAINS ===");
+          console.log("===== VILLAINS =====");
           console.log(villainList);
 
           break;
