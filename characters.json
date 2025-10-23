@@ -1,4 +1,34 @@
 {
-  "heroes": [],
-  "villains": []
+  "heroes": [
+    {
+      "nickname": "Flash",
+      "role": "Hero",
+      "powerName": "Speed Force",
+      "powerStyle": "Pshyical",
+      "powerDescription": "Flash is capable of using an ancient speedforce to move extremely fast."
+    },
+    {
+      "nickname": "Jean Grey",
+      "role": "Hero",
+      "powerName": "Telepathy and Telekinesis",
+      "powerStyle": "Mental",
+      "powerDescription": "Jean Grey can read minds and move objects with the power of her mind."
+    }
+  ],
+  "villains": [
+    {
+      "nickname": "Venom",
+      "role": "Villain",
+      "powerName": "Symbiotic Control",
+      "powerStyle": "Pshyical",
+      "powerDescription": "Venom is an alien capable of merging with another body, providing enhanced attributes in a kind of symbiotic possession."
+    },
+    {
+      "nickname": "Joker",
+      "role": "Villain",
+      "powerName": "Strategic Intelligence and Manipulation of Toxic Gases",
+      "powerStyle": "Pshyical",
+      "powerDescription": "Joker is a born strategist and can devise evil plans using his ability to control poisonous gases, such as Joker Venom."
+    }
+  ]
 }
