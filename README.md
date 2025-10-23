@@ -1,6 +1,6 @@
 # Character Generator
 
-Projeto simples desenvolvido em TypeScript, feito para aplicar os conceitos fundamentais da linguagem em um sistema de criação de personagens. 
+Projeto desenvolvido em TypeScript, feito para aplicar os conceitos fundamentais da linguagem em um sistema de criação de personagens. 
 
 Ao ser executado, o programa abre um painel de menu, que fornece opções como:
 
@@ -13,5 +13,7 @@ Ao ser executado, o programa abre um painel de menu, que fornece opções como:
 - O personagem é salvo em uma lista respectiva à sua designação, que pode ser mostrada ao escolher a segunda opção "List". As listas de "Heroes" e "Villains" são armazenadas em um arquivo JSON, permitindo que sejam revisitadas mesmo após o usuário sair e executar novamente o programa.
 - Ao escolher a opção "Remove", o usuário é perguntado sobre o nome do personagem que deverá ser removido, e então a remoção ocorrerá com sucesso se for um nome válido.
 - Enfim, a última opção "Exist" força o encerramento do programa.
+
+O tratamento de erros engloba todas as opções, permitindo com que o programa continue rodando mesmo que o usuário digite alguma informação inválida. Isso ocorre especialmente quando envolve tipos, como o papel ou o estilo de poder.
 
 Conceitos aplicados: Type annotations, Type aliases, Classes, Async/Await, Union types, Type guards, Import/Export, Records, Loop e controle de fluxo, Tratamento de Erro, Persistência de dados.
